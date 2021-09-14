@@ -1,0 +1,104 @@
+.header{
+    grid-column:full-start /col-end 6;
+    grid-row:1 /2;
+
+    @media only screen and (max-width:$bp-large){
+        grid-row:2/3;
+    }
+    @media only screen and (max-width:$bp-medium){
+        grid-column:full-start/full-end;
+    }
+
+    background-image:linear-gradient(rgba($color-secondary, .9),rgba($color-secondary, .9)), url(../img/hero.jpeg);
+    background-size: cover;
+    background-position:center;
+
+    display:grid;
+    grid-template-rows:1fr min-content minmax(6rem, min-content) 1fr;
+    grid-template-columns:minmax(min-content max-content);
+    grid-row-gap:1.5rem;
+    
+    
+    padding:8rem;
+    padding-top:4rem;
+    justify-content:center;
+
+    @media only screen and (max-width:$bp-small){
+        padding:3rem;
+        
+    }
+
+    
+    .heading-3{
+        font-size:1.8rem;
+    }
+
+    &__btn{
+        justify-self:start;
+        align-self:start;
+    }
+
+
+
+    &__logo{
+        height:3.5rem;
+        justify-self: center;
+    }
+
+    &__seenon-text{
+        //justify-self:center;
+        font-size:1.7rem;
+        color:$color-grey-light-2;
+
+        display:grid;
+        grid-auto-flow:column;
+        align-items:center;
+        //justify-items:stretch;
+        grid-template-columns: 1fr max-content 1fr;
+        grid-column-gap:50px;
+
+        &::before,
+        &::after{
+            content:"";
+            color:$color-grey-light-2;
+            height:1px;
+            display:block;
+            background-color:currentColor;
+
+
+        }
+
+       /* &::before{
+            justify-self:start;
+
+        }
+        &::after{
+            justify-self:end;
+        }*/
+    }
+
+    &__seenon-logos{
+        opacity:.7;
+        //width:100%;
+        /*display:flex;
+        justify-content:space-around;*/
+
+        display:grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-column-gap: 3rem;
+        justify-items:center;
+        align-items:center;   
+
+        img{
+            max-height:3rem;
+            max-width:100%;
+            
+
+        }
+        
+
+    }
+
+
+}
+

@@ -1,0 +1,21 @@
+{
+  "name": "nexter",
+  "version": "1.0.0",
+  "description": "nexter ",
+  "main": "index.js",
+  "dependencies": {
+    "sass": "^1.39.0"
+  },
+  "devDependencies": {
+    "autoprefixer": "^10.3.3",
+    "concat": "^1.0.3",
+    "postcss": "^8.1.0",
+    "postcss-cli": "^8.3.1"
+  },
+  "scripts": {
+    "watch:sass": "sass sass/main.scss css/style.css -w",
+    "compile:sass": "sass sass/main.scss css/style.comp.css"
+  },
+  "author": "Nick",
+  "license": "ISC"
+}

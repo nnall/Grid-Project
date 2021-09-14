@@ -1,0 +1,88 @@
+.realtors{
+    //for positioning 'realtors' in 'container'
+    background-color: $color-secondary;
+    grid-column:col-start 7 / -1;
+    grid-row:1;
+
+
+    //for 'realtors' section by itself
+    padding:3rem;
+    display:grid;
+    justify-content:center;
+    align-content:center;
+    justify-items:center;
+    grid-gap:2rem;
+    
+    @media only screen and (max-width:$bp-large){
+        grid-row:2/3;
+    }
+    @media only screen and (max-width:$bp-medium){
+        //re-positioning 'realtors' section in 'container'
+        grid-row:3/4;
+        grid-column:full-start/full-end; //spans full page
+        padding:0;
+    }
+
+    @media only screen and (max-width:$bp-small){
+        padding:3rem 0;
+        
+    }
+
+    
+    .heading-3{
+
+        @media only screen and (max-width:$bp-medium){
+            display:none;
+        }
+        
+        
+    }
+
+    &__list{
+        display:grid;
+        grid-template-columns: min-content max-content; //2-column grid.. width of parent 'realtors' forced 3 rows, no row declaration.
+        grid-column-gap:2rem;
+        grid-row-gap:5vh;
+        align-items:center;
+        
+        @media only screen and (max-width:$bp-medium){
+           /*display:flex;
+            justify-content:space-evenly;*/
+
+            grid-template-columns:repeat(3, min-content max-content); //6 columns (2 for each realtor) spread horizontally  
+        }
+
+        @media only screen and (max-width:$bp-small){
+            grid-template-columns: min-content max-content;
+            grid-row-gap:2vh;
+            
+        }
+
+        
+    }
+
+    &__img{
+        width:7rem;
+        border-radius:50%;
+        display:block;   
+    }
+
+    @media only screen and (max-width:$bp-medium){
+       
+        &__details{
+
+            &:not(:last-child){
+                margin-right:5vw; //increase space on right side of each details box
+            }
+        }
+    }
+
+    &__sold{
+        text-transform: uppercase;
+        color:$color-grey-light-2;
+        margin-top:-3px;
+
+    }
+
+
+}

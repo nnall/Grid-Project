@@ -1,0 +1,67 @@
+.footer{
+    //as an ITEM of container
+    background-color:$color-secondary;
+    grid-column:full-start / full-end;
+    grid-row:6 / -1;
+
+    //as its OWN container (flex)
+    //display:flex;
+    //flex-direction: column;
+    //align-items:center;
+    padding:8rem;
+
+
+    &__copyright{
+       
+        margin:auto;
+        text-align:center;
+        color:rgba(#fff, .5);
+        padding:4rem;
+        
+        width:70%;
+        font-size:1.7rem;
+    }
+
+    @media only screen and (max-width:$bp-large){
+        grid-row:7/-1;
+    }
+    @media only screen and (max-width:$bp-medium){
+        grid-row:9/-1;
+    }
+}
+
+.nav{
+    display:grid;
+    grid-template-columns:repeat(auto-fit, minmax(15rem, 1fr));
+    grid-column-gap:2rem;
+    
+    
+    
+    align-items:center; //centering links vertically
+    
+    list-style:none;
+
+    &__link:link,
+    &__link:visited{
+        font-size:1.4rem;
+        text-decoration:none;
+        text-transform:uppercase;
+        color:#fff;
+        font-family:$font-display;
+        padding:2.5rem;
+        text-align:center; //centering links horizontally
+        display:block; // causes padding and 'text-align' centering to take effect (don't work on link's default "inline" display)
+        transition: all ease-in .2s;
+
+        &:hover{
+            background-color:rgba($color-grey-light-1, .05);
+        }
+            
+    
+        
+        
+        
+    
+    }
+
+}
